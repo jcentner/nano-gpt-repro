@@ -1,0 +1,21 @@
+stream nvidia-smi: 
+
+$ /usr/lib/wsl/lib/nvidia-smi dmon -s pucmt  # power, GPU%, mem%, clocks, temp
+
+
+nvtop interactive TUI:
+
+$ sudo add-apt-repository multiverse -y && sudo apt update
+$ sudo apt install -y nvtop
+$ nvtop
+
+
+lightweight CLI:
+
+$ pip install --user gpustat
+$ ~/.local/bin/gpustat --watch 1
+
+or in venv:
+
+$ pip install gpustat
+$ gpustat --watch 1
